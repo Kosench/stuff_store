@@ -6,12 +6,13 @@ import Categories from "../Categories/Categories";
 
 const Home = () => {
     const {products, categories} = useSelector((state) => state);
+    const trendingProducts = products.list.slice(1, 6);
     return (
         <>
             <Poster>
 
             </Poster>
-            <Products products={products.list} amount={5} title="Trending"/>
+            <Products products={trendingProducts} amount={6} title="Trending"/>
             <Categories products={categories.list} amount={5} title="Categories"/>
         </>
     );
